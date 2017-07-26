@@ -11,8 +11,9 @@ module.exports = (app) => {
     app.get("/logged_user", users.logged_user)
     app.delete("/user/:id", users.deleteUser) // the delete route gets added
 
-    app.get('/new_questions', questions.index)
-    app.post('/questions/add', questions.add)
+    app.get('/questions', questions.index)
+    app.post('/question/add', questions.add)
+    app.post("/user/:id", users.updateUser)
 
     app.get("*", (req, res) => {
 		res.sendFile(path.resolve("./client/dist/index.html"))

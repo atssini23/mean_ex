@@ -45,7 +45,7 @@ module.exports = {
             .then(user => user.remove())  // remove the user we want to del
             .then(user =>res.json(user))  //send the response 
             .catch(err => res.status(500).json(err)) //if error send error res
-    }
+    },
 
     // deleteUser2: async (req, res) => {
     //     try {
@@ -56,5 +56,12 @@ module.exports = {
     //         res.status(500).json(err);
     //     }
     // }
+
+    updateUser: (req, res) =>{
+        User.update({_id: req.params.id}, req.body)
+            .then(user => res.json(user))
+            .catch(err => res.status(500).json(err))
+
+    }
     
 }

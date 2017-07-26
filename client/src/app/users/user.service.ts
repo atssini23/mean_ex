@@ -32,4 +32,10 @@ export class UserService {
           .map(data => data.json())
           .toPromise()
   }
+  updateUser(user: User){
+    return this.http.post(`/user/${user._id}`, user)
+          .map(data => data.json())
+          .toPromise()
+
+  }
 }

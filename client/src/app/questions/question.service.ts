@@ -13,4 +13,10 @@ export class QuestionService {
         .map(data => data.json())
         .toPromise()
     }
+
+    list_questions(){
+        return this._http.get("/questions")
+        .map(data => data.json())
+        .toPromise()
+    }
 }

@@ -6,12 +6,13 @@ import { UsersDashboardComponent } from './users/users-dashboard/users-dashboard
 
 import { QuestionsComponent } from './questions/questions.component'
 import { QuestionsCreateComponent } from './questions/questions-create/questions-create.component'
+import { QuestionsListComponent } from './questions/questions-list/questions-list.component'
 
 const routes: Routes = [
      { path: "login", component: UsersLoginComponent },
      { path: "dashboard", component: UsersDashboardComponent },
-     { path: "new_questions", component: QuestionsCreateComponent},
-     { path: "questions/add", component: QuestionsCreateComponent},
+     { path: "new_questions2", component: QuestionsCreateComponent},
+     { path: "lets_play", component: QuestionsListComponent},
      
      { path: "", pathMatch: "full", redirectTo: "/login"}     
 ];

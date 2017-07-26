@@ -1,0 +1,27 @@
+<h3 *ngIf = "current_user" >Hi, {{current_user.name}}</h3>
+
+<form *ngIf="questions.length" (submit)="onSubmit()">
+  <div>
+    <h3><p>{{questions[0].q}}</p></h3>
+    <input type="radio" name="{{questions[0].q}}" value="correct" [(ngModel)]="user_answers[0]">{{questions[0].answer}} <br>
+    <input type="radio" name="{{questions[0].q}}" value="incorrect" [(ngModel)]="user_answers[0]">{{questions[0].fanswer}} <br>
+    <input type="radio" name="{{questions[0].q}}" value="incorrect2" [(ngModel)]="user_answers[0]">{{questions[0].fanswer2}} <br>
+    <br>
+  </div>
+  <div>
+    <h3><p>{{questions[1].q}}</p></h3>
+    <input type="radio" name="{{questions[1].q}}" value="correct" [(ngModel)]="user_answers[1]">{{questions[1].answer}} <br>
+    <input type="radio" name="{{questions[1].q}}" value="incorrect" [(ngModel)]="user_answers[1]">{{questions[1].fanswer}} <br>
+    <input type="radio" name="{{questions[1].q}}" value="incorrect2" [(ngModel)]="user_answers[1]">{{questions[1].fanswer2}} <br>
+    <br>
+  </div>
+  <div>
+    <h3><p>{{questions[2].q}}</p></h3>
+    <input type="radio" name="{{questions[2].q}}" value="correct" [(ngModel)]="user_answers[2]">{{questions[2].answer}} <br>
+    <input type="radio" name="{{questions[2].q}}" value="incorrect" [(ngModel)]="user_answers[2]">{{questions[2].fanswer}} <br>
+    <input type="radio" name="{{questions[2].q}}" value="incorrect2" [(ngModel)]="user_answers[2]">{{questions[2].fanswer2}} <br>
+    <br>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+

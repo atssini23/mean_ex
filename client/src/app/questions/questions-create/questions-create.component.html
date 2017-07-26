@@ -8,8 +8,8 @@
   </div>
   
   <p>Correct Answer: <input type="text" name="answer" [(ngModel)]="new_question.answer" #answer required></p>
-  <p>Fake Answer: <input type="text" name="fanswer" [(ngModel)]="new_quesion.fanswer" #fanswer required></p>
-  <p>Fake Answer: <input type="text" name="fanswer2" [(ngModel)]="new_quesion.fanswer2" #fanswer2 required></p>
+  <p>Fake Answer: <input type="text" name="fanswer" [(ngModel)]="new_question.fanswer" #fanswer required></p>
+  <p>Fake Answer: <input type="text" name="fanswer2" [(ngModel)]="new_question.fanswer2" #fanswer2 required></p>
   <button type=""><a href="/dashboard">Cancel</a></button> <input type="submit" value="Add Question" [disabled]=!formData.valid>
 </form>
 

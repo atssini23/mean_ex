@@ -1,23 +1,35 @@
-<h3 *ngIf = "current_user" >Hello, {{current_user.name}}</h3>
+<div *ngIf = "current_user">
+
+<h3>Hello, {{current_user.name}}</h3>
+
+<p *ngIf = "current_user.score != null" >That was great {{current_user.name}} your score is {{current_user.score}}/3 ({{ current_user.score / 3 | percent }})</p>
+</div>
 
 <p><a href="/logout">Log out</a> </p>
 
-<button type="">Play</button>
+
+<a [routerLink]="['/lets_play']"><button type="">Play</button> </a>
 <p>click the button above to start the trivia game!<p>
 <br>
 <br>
 
 <table class="table-hover">
   <tr>
-    <th>Name</th> 
-    <th>Created At</th>
-    <th>Updated At</th>
+    <th>Name</th>
+    <th>&nbsp;</th> 
+    <th>Score</th>
+    <th>Percentage</th>
+    <!--<th>Created At</th>
+    <th>Updated At</th>-->
     <th></th>
   </tr>
   <tr *ngFor = "let user of user_list">
     <td>{{user.name}}</td>
-    <td>{{user.createdAt | date: "short"}}</td>
-    <td>{{user.updatedAt | date: "short"}}</td>
+    <td>&nbsp;</td>
+    <td>{{user.score}}</td>
+    <td>{{user.score / 3 | percent}}</td>
+    <!--<td>{{user.createdAt | date: "short"}}</td>
+    <td>{{user.updatedAt | date: "short"}}</td>-->
     <!--<td><button (click)="deleteUser(user)">Delete</button></td> -->
     <!--butt that calls a function and pass param-->
   </tr>

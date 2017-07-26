@@ -15,7 +15,8 @@ import { UsersLoginComponent } from './users/users-login/users-login.component';
 import { UsersDashboardComponent } from './users/users-dashboard/users-dashboard.component';
 
 import { QuestionsComponent } from './questions/questions.component';
-import { QuestionsCreateComponent } from './questions/questions-create/questions-create.component'
+import { QuestionsCreateComponent } from './questions/questions-create/questions-create.component';
+import { QuestionsListComponent } from './questions/questions-list/questions-list.component'
 
 
 
@@ -26,7 +27,8 @@ import { QuestionsCreateComponent } from './questions/questions-create/questions
     UsersLoginComponent,
     UsersDashboardComponent,
     QuestionsComponent,
-    QuestionsCreateComponent
+    QuestionsCreateComponent,
+    QuestionsListComponent
   ],
   imports: [
     BrowserModule,
